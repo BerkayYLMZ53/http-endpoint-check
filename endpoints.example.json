@@ -1,0 +1,17 @@
+{
+  "timeout_seconds": 3,
+  "endpoints": [
+    {
+      "name": "Yerel sunucu",
+      "url": "http://127.0.0.1:8765/",
+      "method": "HEAD",
+      "expect": [200],
+      "max_latency_ms": 2000
+    },
+    {
+      "name": "Eksik rota",
+      "url": "http://127.0.0.1:8765/olmayan-bir-dosya",
+      "expect": [404]
+    }
+  ]
+}
